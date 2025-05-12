@@ -1,0 +1,9 @@
+animals
+cracks_or_peeling_paint
+defect_pole
+floods
+garbage
+illegal_parking
+power_bird
+road_shield
+vandalisme_graffiti
