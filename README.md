@@ -28,6 +28,7 @@ We used a combination of publicly available datasets:
    - Bears and wildlife hazard detection
    - Flooded roads and areas
    - Illegal or improper parking
+3. *Also some free images from*: https://unsplash.com
 
 These datasets were preprocessed and unified into a multi-class classification task.
 ---
