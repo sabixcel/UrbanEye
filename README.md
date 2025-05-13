@@ -77,7 +77,7 @@ This makes it easy for the general public to participate in improving their city
 
 ---
 
-<img width="295" alt="Captură de ecran 2025-05-13 221727" src="https://github.com/user-attachments/assets/9ea056de-636c-4163-9bcb-07642ff27446" />
+![image](https://github.com/user-attachments/assets/9ea056de-636c-4163-9bcb-07642ff27446)
 
 ** Optimizer: Adam**
 **learning rate = 0.0001**
