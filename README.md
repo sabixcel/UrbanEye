@@ -12,7 +12,7 @@ Examples include:
 
 ---
 
-## 📂 Dataset
+## Dataset
 
 We used a combination of publicly available datasets:
 
@@ -102,25 +102,27 @@ This makes it easy for the general public to participate in improving their city
 git clone https://github.com/yourusername/city-issue-detector.git
 cd city-issue-detector
 
+2. Download the model from google drive: https://drive.google.com/file/d/1ReL5KWwVVQyQesVYtIDe_UFULX3JvoHe/view?usp=sharing
 
-2. Install dependencies
+3. Install dependencies
 
 pip install -r requirements.txt
 
 
-3. Run the App
+4. Run the App
 
-streamlit run UrbanEye.py
+If you want to run only on local browser: streamlit run UrbanEye.py
+If you want to open the app also on the phone (connected to same network): streamlit run UrbanEye.py --server.address=0.0.0.0 --server.enableCORS false
+Note: please change the IP address with the IPv4 ADdress from your network.
 
-
-4. Access the Web Interface
+5. Access the Web Interface
 
 The app will launch in your browser automatically.
 
 Use it from desktop or mobile by connecting to the local network IP.
 
 
-5. Upload an image with a city problem and get your solution.
+6. Upload an image or a zip archive with multiple images, with a city problem and get your solution.
 
 
 Future Work
@@ -137,3 +139,5 @@ Future Work
 - Add geolocation tagging for smarter reporting
 
 - Introduce a severity level ranking for each problem
+
+7. Final dataset used (google drive link): https://drive.google.com/file/d/11t-BCIoe8FTalWe2sxqwBun8Iig19aOT/view?usp=sharing
