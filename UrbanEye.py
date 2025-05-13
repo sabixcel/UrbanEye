@@ -43,13 +43,13 @@ st.markdown("""
 ### parameters
 MODEL_PATH = "urbanEye_model.keras"
 CLASSES_PATH = "classes.txt"
+SOLUTIONS_PATH = "solutions.txt"
 IMG_SIZE = (224, 224)
 LAST_CONV_LAYER = "conv5_block3_out"
 
 ### persistent temp folder -> for heatmap image
 PERSISTENT_TMP_DIR = os.path.join(tempfile.gettempdir(), "streamlit_uploaded_images")
 os.makedirs(PERSISTENT_TMP_DIR, exist_ok=True)
-
 
 ### here, we used streamlit's caching system -> to store the resources and improve perfomarce
 @st.cache_resource
@@ -59,10 +59,20 @@ def load_class_labels():
 @st.cache_resource
 def load_trained_model():
     return load_model(MODEL_PATH)
+@st.cache_resource
+def load_solutions():
+    solution_dict = {}
+    with open(SOLUTIONS_PATH, "r") as f:
+        for line in f:
+            if ':' in line:
+                key, value = line.strip().split(":", 1)
+                solution_dict[key.strip()] = value.strip()
+    return solution_dict
 
 ### read class labels and model
 class_labels = load_class_labels()
 model = load_trained_model()
+solutions = load_solutions()
 
 ### prediction function
 def predict_image(image_path, model, class_names, img_size=(224, 224)):
@@ -104,6 +114,9 @@ if uploaded_file is not None:
         _, predicted_idx, confidence, full_pred, duration = predict_image(tmp_file_path, model, class_labels, IMG_SIZE)
 
         st.markdown(f"**Prediction:** {class_labels[predicted_idx]}")
+        predicted_class = class_labels[predicted_idx]
+        if predicted_class in solutions:
+            st.markdown(f"**Suggested Action:** {solutions[predicted_class]}")
         st.markdown(f"**Confidence:** {confidence:.2%}")
         st.markdown(f"**Prediction Time:** {duration:.2f} seconds")
 
@@ -119,7 +132,7 @@ if uploaded_file is not None:
                 st.image(heatmap_img, caption=f"Grad-CAM: {label} ({conf:.2%})", use_container_width=True)
 
         ### send an email to the authorities if the user click on button
-        st.subheader("Do you want to report the problem to the authorties?")
+        st.subheader("Do you want to report the problem to the authorities?")
         with st.form("email_form"):
             location = st.text_input("Location of the problem")
             risk_level = st.selectbox("Risk Level", ["Select Risk Level", "Low", "Medium", "High"])
@@ -172,6 +185,9 @@ if uploaded_file is not None:
                 with cols[1]:
                     _, predicted_idx, confidence, _, duration = predict_image(image_path, model, class_labels, IMG_SIZE)
                     st.markdown(f"**Prediction:** {class_labels[predicted_idx]}")
+                    predicted_class = class_labels[predicted_idx]
+                    if predicted_class in solutions:
+                        st.markdown(f"**Suggested Action:** {solutions[predicted_class]}")
                     st.markdown(f"**Confidence:** {confidence:.2%}")
                     st.markdown(f"**Prediction Time:** {duration:.2f} seconds")
 

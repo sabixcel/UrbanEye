@@ -1,0 +1,9 @@
+animals: if it is a dangerous animal (like a bear) call 911!
+cracks_or_peeling_paint: contact the local authorities for building inspection
+defect_pole: contact local authorities for replacing or repairing poles promptly
+floods: contact the local authorities to upgrade or restore the stormwater drainage systems
+garbage: you can clean it up! :) or you can contact local authorities to deploy more bins in the city or raise awareness amoung local people
+illegal_parking: you can look for a phone number in the car windscreen and contact the owner of the car to pick up his car or contact police 
+power_bird: contact local authorities to install bird diverters 
+road_shield: contact traffic police
+vandalisme_graffiti: contact traffic police

@@ -3,9 +3,9 @@ import os
 from email.message import EmailMessage
 
 def send_email_with_image(subject, body, image_path):
-    sender_email = "onut.sabina27@yahoo.com"
+    sender_email = "dumb_email@yahoo.com"
     sender_password = ""
-    receiver_email = "onut.sabina27@gmail.com"
+    receiver_email = "dumb_email@yahoo.com"
 
     msg = EmailMessage()
     msg["Subject"] = subject
