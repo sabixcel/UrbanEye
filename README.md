@@ -76,21 +76,9 @@ This makes it easy for the general public to participate in improving their city
 
 ---
 
-**Model Overview
+**Model Overview**
+<img width="295" alt="Captură de ecran 2025-05-13 221727" src="https://github.com/user-attachments/assets/9ea056de-636c-4163-9bcb-07642ff27446" />
 
-** Layer (type)                    ┃ Output Shape           ┃       Param # ┃
-┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
-│ resnet50 (Functional)           │ (None, 2048)           │    23,587,712 │
-├─────────────────────────────────┼────────────────────────┼───────────────┤
-│ flatten (Flatten)               │ (None, 2048)           │             0 │
-├─────────────────────────────────┼────────────────────────┼───────────────┤
-│ dense (Dense)                   │ (None, 512)            │     1,049,088 │
-├─────────────────────────────────┼────────────────────────┼───────────────┤
-│ dense_1 (Dense)                 │ (None, 9)              │         4,617 │
-└─────────────────────────────────┴────────────────────────┴───────────────┘
- Total params: 24,641,417 (94.00 MB)
- Trainable params: 24,588,297 (93.80 MB)
- Non-trainable params: 53,120 (207.50 KB)**
 ** Optimizer: Adam
  learning rate = 0.0001**
 
@@ -102,29 +90,12 @@ This makes it easy for the general public to participate in improving their city
 ![image](https://github.com/user-attachments/assets/1d75844f-7450-4787-9024-5ae6e0f7f130)
 
 **Confusion Matrix**
-
 ![image](https://github.com/user-attachments/assets/eb6c8f3f-b42c-4438-88e3-ef6854376137)
 
 **Precision, Recall, F1-score and Support**
-
-                         precision    recall  f1-score   support
-
-                animals       1.00      0.82      0.90        22
-cracks_or_peeling_paint       0.94      0.92      0.93        53
-            defect_pole       0.94      0.95      0.94        93
-                 floods       0.98      0.99      0.99       660
-                garbage       0.98      0.98      0.98       304
-        illegal_parking       0.99      0.99      0.99       420
-             power_bird       0.91      0.91      0.91        11
-            road_shield       0.98      0.98      0.98       558
-    vandalisme_graffiti       0.98      0.97      0.98       432
-
-               accuracy                           0.98      2553
-              macro avg       0.97      0.95      0.96      2553
-           weighted avg       0.98      0.98      0.98      2553
-
-
-
+<img width="257" alt="Captură de ecran 2025-05-13 221846" src="https://github.com/user-attachments/assets/eb2fd602-0ad1-48ec-8d78-5de74e3c5ebd" />
+    
+      
 ##  How to Run
 
 ### 1. Clone the Repository
