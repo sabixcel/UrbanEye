@@ -76,6 +76,55 @@ This makes it easy for the general public to participate in improving their city
 
 ---
 
+**Model Overview
+
+** Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ resnet50 (Functional)           │ (None, 2048)           │    23,587,712 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ flatten (Flatten)               │ (None, 2048)           │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense (Dense)                   │ (None, 512)            │     1,049,088 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 (Dense)                 │ (None, 9)              │         4,617 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 24,641,417 (94.00 MB)
+ Trainable params: 24,588,297 (93.80 MB)
+ Non-trainable params: 53,120 (207.50 KB)**
+** Optimizer: Adam
+ learning rate = 0.0001**
+
+
+ **Model Accuracy**
+![image](https://github.com/user-attachments/assets/6cf7cfa4-508c-4de0-9e77-4cfa01e20b2a)
+
+**Model Loss**
+![image](https://github.com/user-attachments/assets/1d75844f-7450-4787-9024-5ae6e0f7f130)
+
+**Confusion Matrix**
+
+![image](https://github.com/user-attachments/assets/eb6c8f3f-b42c-4438-88e3-ef6854376137)
+
+**Precision, Recall, F1-score and Support**
+
+                         precision    recall  f1-score   support
+
+                animals       1.00      0.82      0.90        22
+cracks_or_peeling_paint       0.94      0.92      0.93        53
+            defect_pole       0.94      0.95      0.94        93
+                 floods       0.98      0.99      0.99       660
+                garbage       0.98      0.98      0.98       304
+        illegal_parking       0.99      0.99      0.99       420
+             power_bird       0.91      0.91      0.91        11
+            road_shield       0.98      0.98      0.98       558
+    vandalisme_graffiti       0.98      0.97      0.98       432
+
+               accuracy                           0.98      2553
+              macro avg       0.97      0.95      0.96      2553
+           weighted avg       0.98      0.98      0.98      2553
+
+
+
 ##  How to Run
 
 ### 1. Clone the Repository
