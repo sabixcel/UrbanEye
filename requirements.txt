@@ -1,0 +1,11 @@
+streamlit
+numpy
+tensorflow
+Image
+os
+zipfile
+cv2
+matplotlib
+seaborn
+PIL
+pickle
