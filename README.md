@@ -93,7 +93,7 @@ This makes it easy for the general public to participate in improving their city
 ![image](https://github.com/user-attachments/assets/eb6c8f3f-b42c-4438-88e3-ef6854376137)
 
 
-<img width="257" alt="Captură de ecran 2025-05-13 221846" src="https://github.com/user-attachments/assets/eb2fd602-0ad1-48ec-8d78-5de74e3c5ebd" />
+![image](https://github.com/user-attachments/assets/eb2fd602-0ad1-48ec-8d78-5de74e3c5ebd)
     
       
 ##  How to Run
