@@ -12,7 +12,7 @@ Examples include:
 
 ---
 
-![image]([https://github.com/sabixcel/UrbanEye/Demo/Screenshot 2025-05-13 232145](https://github.com/sabixcel/UrbanEye/blob/main/Demo/Screenshot%202025-05-13%20232145.png))
+![image](https://github.com/sabixcel/UrbanEye/blob/main/Demo/Screenshot%202025-05-13%20232145.png)
 
 ## Dataset
 
