@@ -76,7 +76,7 @@ This makes it easy for the general public to participate in improving their city
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 ### 1. Clone the Repository
 ```bash
