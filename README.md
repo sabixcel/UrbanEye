@@ -76,23 +76,22 @@ This makes it easy for the general public to participate in improving their city
 
 ---
 
-**Model Overview**
 <img width="295" alt="Captură de ecran 2025-05-13 221727" src="https://github.com/user-attachments/assets/9ea056de-636c-4163-9bcb-07642ff27446" />
 
-** Optimizer: Adam
- learning rate = 0.0001**
+** Optimizer: Adam**
+**learning rate = 0.0001**
 
 
- **Model Accuracy**
+
 ![image](https://github.com/user-attachments/assets/6cf7cfa4-508c-4de0-9e77-4cfa01e20b2a)
 
-**Model Loss**
+
 ![image](https://github.com/user-attachments/assets/1d75844f-7450-4787-9024-5ae6e0f7f130)
 
-**Confusion Matrix**
+
 ![image](https://github.com/user-attachments/assets/eb6c8f3f-b42c-4438-88e3-ef6854376137)
 
-**Precision, Recall, F1-score and Support**
+
 <img width="257" alt="Captură de ecran 2025-05-13 221846" src="https://github.com/user-attachments/assets/eb2fd602-0ad1-48ec-8d78-5de74e3c5ebd" />
     
       
