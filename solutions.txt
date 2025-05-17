@@ -7,3 +7,4 @@ illegal_parking: you can look for a phone number in the car windscreen and conta
 power_bird: contact local authorities to install bird diverters 
 road_shield: contact traffic police
 vandalisme_graffiti: contact traffic police
+other: no solution

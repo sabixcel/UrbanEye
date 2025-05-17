@@ -7,3 +7,4 @@ illegal_parking
 power_bird
 road_shield
 vandalisme_graffiti
+other

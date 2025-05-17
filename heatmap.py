@@ -33,20 +33,3 @@ def overlay_heatmap(image, heatmap, alpha=0.4, cmap='jet'):
     image_rgb = image.astype('uint8')
     superimposed_img = cv2.addWeighted(image_rgb, 1 - alpha, heatmap_color, alpha, 0)
     return superimposed_img
-
-### function to load the image, predict its class and then generate grad-cam heatmap rendering
-def generate_heatmap(image_path, class_labels, model, IMG_SIZE, LAST_CONV_LAYER):
-    base_model = model.layers[0]
-    classifier_head = tf.keras.Sequential(model.layers[1:])
-
-    img_raw = tf.keras.utils.load_img(image_path, target_size=IMG_SIZE)
-    img_array = tf.keras.utils.img_to_array(img_raw)
-    img_preprocessed = tf.keras.applications.resnet50.preprocess_input(img_array.copy())
-
-    preds = model.predict(np.expand_dims(img_preprocessed, axis=0), verbose=0)
-    pred_label = np.argmax(preds[0])
-
-    heatmap = get_gradcam_heatmap_sequential(base_model, classifier_head, img_preprocessed, pred_label, LAST_CONV_LAYER)
-    superimposed = overlay_heatmap(img_array, heatmap)
-
-    return superimposed, class_labels[pred_label], preds[0][pred_label]
