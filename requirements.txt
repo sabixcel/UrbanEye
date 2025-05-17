@@ -1,4 +1,5 @@
 streamlit
+streamlit-js-eval
 numpy = 1.24.3
 tensorflow
 Image
