@@ -115,7 +115,7 @@ pip install -r requirements.txt
 4. Run the App
 
 If you want to run only on local browser: streamlit run UrbanEye.py
-If you want to open the app also on the phone (connected to same network): streamlit run UrbanEye.py --server.address=0.0.0.0 --server.enableCORS false
+If you want to open the app also on the phone (connected to same network): streamlit run UrbanEye.py --server.address=0.0.0.0
 Note: please change the IP address with the IPv4 ADdress from your network.
 
 5. Access the Web Interface
